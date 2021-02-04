@@ -138,7 +138,7 @@ if __name__ == "__main__":
                 try:
                     print("\t\t", file)
                     if "-" not in file.split("_")[0]:
-                        # sips -s format [转换的目标格式] --out [目标文件名字] [输入文件]
+                        # sips -s format [target_format] --out [output_file_path] [input_file_path]
                         tar_pdf = juan_path+"/"+ ".".join(file.split(".")[:-1]) + ".pdf"
                         subprocess.run(["sips", "-s", "format", "pdf", "--out", tar_pdf, juan_path+"/"+file])
                         pdf_files.append(tar_pdf)
